@@ -234,30 +234,6 @@ export default {
           'CI/CD',
         ],
       },
-      {
-        title: 'Gunawan Portfolio CMS',
-        category: 'Proyek Pribadi',
-        status: 'Dalam Pengembangan',
-        context:
-          'Membangun platform portofolio pribadi untuk menampilkan pengalaman profesional, proyek, keahlian teknis, dan informasi karir.',
-        challenge:
-          'Konten portofolio harus mudah dikelola dan nantinya dapat diperbarui tanpa harus mengedit kode sumber untuk setiap pembaruan konten.',
-        approach:
-          'Mengembangkan frontend berbasis komponen terlebih dahulu, dengan backend API dan database yang direncanakan untuk mendukung fitur manajemen konten di masa mendatang.',
-        contribution: [
-          'Merancang struktur portofolio dan arsitektur frontend.',
-          'Membangun komponen antarmuka yang dapat digunakan kembali dengan Nuxt dan Vue.',
-          'Merencanakan integrasi backend API menggunakan Go.',
-          'Merencanakan penyimpanan data PostgreSQL dan fungsionalitas CMS di masa mendatang.',
-        ],
-        technologies: [
-          'Nuxt',
-          'Vue',
-          'TypeScript',
-          'Golang (Direncanakan)',
-          'PostgreSQL (Direncanakan)',
-        ],
-      },
     ],
   },
 

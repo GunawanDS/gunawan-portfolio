@@ -56,10 +56,29 @@
 
 @media (max-width: 768px) {
   :root {
-    --section-spacing: 64px;
-    --font-size-heading: 30px;
-    --font-size-display: 42px;
-    --page-padding: 24px;
+    --section-spacing: 48px;
+    --font-size-heading: 26px;
+    --font-size-display: 34px;
+    --page-padding: 20px;
+  }
+
+  /* Section Title & Headings */
+  .section-title {
+    font-size: 24px;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    margin-bottom: 24px;
+    word-break: break-word;
+  }
+
+  /* Menu Overlay Items */
+  .menu-label {
+    font-size: clamp(20px, 6vw, 28px);
+    letter-spacing: -0.3px;
+  }
+
+  .menu-link {
+    padding: 10px 14px;
   }
 
   /* Navbar */
@@ -267,12 +286,22 @@
 
 @media (max-width: 480px) {
   :root {
-    --section-spacing: 52px;
-    --font-size-heading: 26px;
-    --font-size-display: 34px;
-    --page-padding: 20px;
+    --section-spacing: 40px;
+    --font-size-heading: 22px;
+    --font-size-display: 28px;
+    --page-padding: 16px;
   }
 
+  .section-title {
+    font-size: 21px;
+    line-height: 1.25;
+    letter-spacing: -0.4px;
+    margin-bottom: 20px;
+  }
+
+  .menu-label {
+    font-size: 19px;
+  }
 
   /* Navbar */
 

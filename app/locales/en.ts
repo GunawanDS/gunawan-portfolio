@@ -234,30 +234,6 @@ export default {
           'CI/CD',
         ],
       },
-      {
-        title: 'Gunawan Portfolio CMS',
-        category: 'Personal Project',
-        status: 'In Development',
-        context:
-          'Building a personal portfolio platform to present professional experience, projects, technical skills, and career information.',
-        challenge:
-          'Portfolio content should be easy to maintain and eventually manageable without editing source code for every content update.',
-        approach:
-          'Developing a component-based frontend first, with a planned backend API and database to support future content management features.',
-        contribution: [
-          'Designing the portfolio structure and frontend architecture.',
-          'Building reusable interface components with Nuxt and Vue.',
-          'Planning backend API integration using Go.',
-          'Planning PostgreSQL data storage and future CMS functionality.',
-        ],
-        technologies: [
-          'Nuxt',
-          'Vue',
-          'TypeScript',
-          'Golang (Planned)',
-          'PostgreSQL (Planned)',
-        ],
-      },
     ],
   },
 
