@@ -1,0 +1,23 @@
+{
+  "name": "portofolio-fe",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@nuxt/icon": "^2.6.2",
+    "devicon": "^2.18.0",
+    "nuxt": "^4.5.2",
+    "pdfjs-dist": "^6.5.438",
+    "vue": "^3.5.43",
+    "vue-router": "^5.3.1"
+  },
+  "devDependencies": {
+    "@iconify-json/logos": "^1.2.20"
+  }
+}
