@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { usePortfolioSettings } from '~/composables/usePortfolioSettings'
+import { useProjectModal } from '~/composables/useProjectModal'
+
 const { t } = usePortfolioSettings()
+const { openProject } = useProjectModal()
 
 const projects = computed(() => t.value.projects.items)
 </script>
@@ -19,14 +23,12 @@ const projects = computed(() => t.value.projects.items)
 
       <div class="projects-list">
         <article
-          v-for="(project, index) in projects"
-          :key="project.title"
+          v-for="project in projects"
+          :key="project.id || project.title"
           v-reveal class="project-card"
         >
           <div class="project-topline">
-            <span class="project-number">
-              {{ String(index + 1).padStart(2, '0') }}
-            </span>
+            <span class="project-category">{{ project.category }}</span>
 
             <span class="project-status">
               {{ project.status }}
@@ -35,8 +37,16 @@ const projects = computed(() => t.value.projects.items)
 
           <div class="project-main">
             <div class="project-title-group">
-              <p class="project-category">{{ project.category }}</p>
               <h3>{{ project.title }}</h3>
+            </div>
+
+            <p class="project-lead-desc">
+              {{ project.shortDescription || project.context }}
+            </p>
+
+            <div class="project-role-badge">
+              <span class="role-badge-label">{{ t.projects.labels.role }}:</span>
+              <span class="role-badge-value">{{ project.role || 'Fullstack Developer' }}</span>
             </div>
 
             <div class="project-details">
@@ -59,7 +69,7 @@ const projects = computed(() => t.value.projects.items)
                 <h4>{{ t.projects.labels.contribution }}</h4>
                 <ul>
                   <li
-                    v-for="item in project.contribution"
+                    v-for="item in project.contribution.slice(0, 3)"
                     :key="item"
                   >
                     {{ item }}
@@ -68,14 +78,25 @@ const projects = computed(() => t.value.projects.items)
               </div>
             </div>
 
-            <div class="project-technologies">
-              <span
-                v-for="technology in project.technologies"
-                :key="technology"
-                class="technology-tag"
+            <div class="project-footer-row">
+              <div class="project-technologies">
+                <span
+                  v-for="technology in project.technologies"
+                  :key="technology"
+                  class="technology-tag"
+                >
+                  {{ technology }}
+                </span>
+              </div>
+
+              <button
+                type="button"
+                class="project-detail-btn"
+                @click="openProject(project as any)"
               >
-                {{ technology }}
-              </span>
+                <span>{{ t.projects.labels.viewDetail }}</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
+              </button>
             </div>
           </div>
         </article>

@@ -35,5 +35,6 @@ useSeoMeta({
     </main>
 
     <AppFooter />
+    <ProjectDetailModal />
   </div>
 </template>
