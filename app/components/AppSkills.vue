@@ -3,7 +3,6 @@
 const { t } = usePortfolioSettings()
 
 const categories = computed(() => t.value.skills.categories)
-const learningTechnologies = computed(() => t.value.skills.learning)
 </script>
 
 <template>
@@ -55,29 +54,6 @@ const learningTechnologies = computed(() => t.value.skills.learning)
             </div>
           </div>
         </article>
-      </div>
-
-      <div class="learning-section">
-        <div class="learning-heading">
-          <p class="section-eyebrow">{{ t.skills.learningEyebrow }}</p>
-          <h3>{{ t.skills.learningTitle }}</h3>
-        </div>
-
-        <div
-          v-for="technology in learningTechnologies"
-          :key="technology.name"
-          v-reveal class="learning-card"
-        >
-          <div class="learning-technology">
-            <i :class="technology.icon" :aria-label="technology.name"></i>
-          </div>
-
-          <div class="learning-content">
-            <span class="learning-eyebrow">{{ t.skills.learningTag }}</span>
-            <h3>{{ technology.name }}</h3>
-            <p>{{ technology.description }}</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>

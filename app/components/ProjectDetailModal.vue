@@ -98,7 +98,50 @@ onBeforeUnmount(() => {
               </div>
 
               <!-- Interactive Architecture Diagram Flow -->
-              <div class="arch-flow-diagram">
+              <div v-if="activeProject.id === 'simrs'" class="arch-flow-diagram">
+                <div class="arch-client-row">
+                  <div class="arch-node arch-web">
+                    <span class="arch-node-badge">Client & Internal Users</span>
+                    <h4>SIMRS Web Modules</h4>
+                    <p>Billing · Farmasi · Gudang · Rekam Medis (RME) · Keuangan</p>
+                  </div>
+                  <div class="arch-node arch-mobile">
+                    <span class="arch-node-badge">External Services</span>
+                    <h4>Vendor & Government</h4>
+                    <p>Bridging Voucher Vendor · SATUSEHAT Kemenkes · BPJS</p>
+                  </div>
+                </div>
+
+                <div class="arch-connector-down">
+                  <span class="arch-arrow-line" />
+                  <span class="arch-connector-label">HTTP / REST / JSON Bridging & Internal Requests</span>
+                  <span class="arch-arrow-line" />
+                </div>
+
+                <div class="arch-backend-row">
+                  <div class="arch-node arch-backend">
+                    <span class="arch-node-badge">Backend & Business Logic</span>
+                    <h4>PHP Native / Laravel</h4>
+                    <p>Voucher Bridging · SATUSEHAT Data Mapping · Modular Hospital Logic</p>
+                  </div>
+                </div>
+
+                <div class="arch-connector-down">
+                  <span class="arch-arrow-line" />
+                  <span class="arch-connector-label">Transactional SQL Queries</span>
+                  <span class="arch-arrow-line" />
+                </div>
+
+                <div class="arch-db-row">
+                  <div class="arch-node arch-database">
+                    <span class="arch-node-badge">Database & Auditing</span>
+                    <h4>PostgreSQL</h4>
+                    <p>Clinical Data · Electronic Medical Records · Voucher Logs</p>
+                  </div>
+                </div>
+              </div>
+
+              <div v-else class="arch-flow-diagram">
                 <div class="arch-client-row">
                   <div class="arch-node arch-mobile">
                     <span class="arch-node-badge">Mobile Client</span>

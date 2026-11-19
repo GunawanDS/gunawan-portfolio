@@ -425,16 +425,47 @@
   }
 
   .project-modal-backdrop {
-    padding: 12px;
+    padding: 8px;
+  }
+
+  .project-modal-container {
+    max-height: 94vh;
+    border-radius: var(--radius-medium);
   }
 
   .project-modal-header {
-    padding: 16px 20px;
+    padding: 14px 16px;
   }
 
   .project-modal-body {
-    padding: 20px 16px;
-    gap: 24px;
+    padding: 16px 14px;
+    gap: 20px;
+  }
+
+  .arch-node {
+    padding: 14px 12px;
+  }
+
+  .arch-node h4 {
+    font-size: 14px;
+  }
+
+  .arch-node p {
+    font-size: 11.5px;
+  }
+
+  .arch-connector-down {
+    gap: 8px;
+  }
+
+  .arch-connector-label {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+
+  .contributions-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
   }
 
   .detail-grid-two,
@@ -450,6 +481,50 @@
 
   .modal-title-area h2 {
     font-size: 20px;
+  }
+
+  .project-footer-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .project-detail-btn {
+    width: 100%;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  /* Document Viewer Responsive (Diploma, Certificates & Experience Proof) */
+  .viewer-toolbar {
+    padding: 10px 14px;
+    gap: 10px;
+  }
+
+  .viewer-title {
+    font-size: 13px;
+  }
+
+  .viewer-controls {
+    gap: 4px;
+  }
+
+  .viewer-button {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .viewer-zoom {
+    min-width: 48px;
+    height: 32px;
+    padding: 0 6px;
+    font-size: 11px;
+  }
+
+  .viewer-footer {
+    padding: 8px 12px;
+    font-size: 11px;
   }
 
 
