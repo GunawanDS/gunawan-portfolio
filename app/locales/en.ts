@@ -706,8 +706,8 @@ export default {
       'Team Collaboration & Communication',
     ],
     languages: [
-      { name: 'Bahasa Indonesia', level: 'Fluent' },
-      { name: 'English', level: 'Proficient' },
+      { name: 'Bahasa Indonesia', level: 'Highly Proficient' },
+      { name: 'English', level: 'Professional' },
     ],
   },
 

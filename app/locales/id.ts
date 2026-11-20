@@ -706,8 +706,8 @@ export default {
       'Kolaborasi Tim & Komunikasi',
     ],
     languages: [
-      { name: 'Bahasa Indonesia', level: 'Fasih' },
-      { name: 'English', level: 'Mahir' },
+      { name: 'Bahasa Indonesia', level: 'Sangat Mahir' },
+      { name: 'Bahasa Inggris', level: 'Profesional' },
     ],
   },
 
