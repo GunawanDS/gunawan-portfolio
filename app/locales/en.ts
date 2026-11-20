@@ -89,7 +89,6 @@ export default {
 
 
   experience: {
-    viewProof: 'View Employment Letter',
     eyebrow: 'CAREER JOURNEY',
     title: 'Professional Experience',
     subtitle: 'My professional journey in software development, IT operations, and system improvement.',
@@ -132,7 +131,6 @@ export default {
         position: 'IT Planning & Development',
         period: 'July 2024 — December 2025',
         type: 'Professional Experience',
-        proof: '/documents/experience/kai-lrt.pdf',
         description:
           'Designed and developed backend services, integrated frontend interfaces, and built CI/CD pipelines for internal applications at KAI Division LRT Jabodebek.',
         responsibilities: [
@@ -156,7 +154,6 @@ export default {
       {
         company: 'PT Value Stream International',
         logo: '/images/companies/valuestream.png',
-        proof: '/documents/experience/value-stream.pdf',
         position: 'IT Helpdesk',
         period: 'June 2022 — April 2024',
         type: 'Professional Experience',
@@ -717,7 +714,6 @@ export default {
   education: {
     eyebrow: 'EDUCATION',
     title: 'Academic background and learning foundation.',
-    viewDiploma: 'View Diploma',
     items: [
       {
         institution: 'Institut Digital Ekonomi LPKIA Bandung',
@@ -725,7 +721,6 @@ export default {
         description:
           'Studied information systems, combining technology, information management, and business processes.',
         achievement: 'GPA: 3.15 / 4.00',
-        proof: '/documents/education/ijazah-s1.pdf',
       },
       {
         institution: 'SMK Pasundan 1 Bandung',

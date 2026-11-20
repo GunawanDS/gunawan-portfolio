@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { t } = usePortfolioSettings()
-const { open: openDocument } = useDocumentViewer()
 
 const education = computed(() => t.value.education.items)
 </script>
@@ -36,16 +35,6 @@ const education = computed(() => t.value.education.items)
             >
               {{ item.achievement }}
             </span>
-
-            <button
-              v-if="item.proof"
-              type="button"
-              class="doc-button"
-              @click="openDocument(item.proof, `${item.institution} — ${t.education.viewDiploma}`)"
-            >
-              <span aria-hidden="true">🎓</span>
-              {{ t.education.viewDiploma }}
-            </button>
           </div>
         </article>
       </div>

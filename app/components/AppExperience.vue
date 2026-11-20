@@ -2,8 +2,6 @@
 <script setup lang="ts">
 const { t } = usePortfolioSettings()
 
-const { open: openDocument } = useDocumentViewer()
-
 const experiences = computed(() => t.value.experience.items)
 </script>
 
@@ -61,16 +59,6 @@ const experiences = computed(() => t.value.experience.items)
                 {{ responsibility }}
               </li>
             </ul>
-
-            <button
-              v-if="experience.proof"
-              type="button"
-              class="doc-button"
-              @click="openDocument(experience.proof, `${experience.company} — ${t.experience.viewProof}`)"
-            >
-              <span aria-hidden="true">🔍</span>
-              {{ t.experience.viewProof }}
-            </button>
 
             <div class="experience-technologies">
               <span

@@ -89,7 +89,6 @@ export default {
 
 
   experience: {
-    viewProof: 'Lihat Surat Keterangan Kerja',
     eyebrow: 'PERJALANAN KARIR',
     title: 'Pengalaman Profesional',
     subtitle: 'Perjalanan profesional saya dalam pengembangan perangkat lunak, operasional IT, dan peningkatan sistem.',
@@ -132,7 +131,6 @@ export default {
         position: 'IT Planning & Development',
         period: 'Juli 2024 — Desember 2025',
         type: 'Pengalaman Profesional',
-        proof: '/documents/experience/kai-lrt.pdf',
         description:
           'Merancang dan mengembangkan layanan backend, mengintegrasikan antarmuka frontend, serta membangun pipeline CI/CD untuk aplikasi internal di KAI Divisi LRT Jabodebek.',
         responsibilities: [
@@ -156,7 +154,6 @@ export default {
       {
         company: 'PT Value Stream International',
         logo: '/images/companies/valuestream.png',
-        proof: '/documents/experience/value-stream.pdf',
         position: 'IT Helpdesk',
         period: 'Juni 2022 — April 2024',
         type: 'Pengalaman Profesional',
@@ -717,7 +714,6 @@ export default {
   education: {
     eyebrow: 'PENDIDIKAN',
     title: 'Latar belakang akademis dan fondasi belajar.',
-    viewDiploma: 'Lihat Ijazah',
     items: [
       {
         institution: 'Institut Digital Ekonomi LPKIA Bandung',
@@ -725,7 +721,6 @@ export default {
         description:
           'Mempelajari sistem informasi yang menggabungkan teknologi, manajemen informasi, dan proses bisnis.',
         achievement: 'IPK: 3.15 / 4.00',
-        proof: '/documents/education/ijazah-s1.pdf',
       },
       {
         institution: 'SMK Pasundan 1 Bandung',
