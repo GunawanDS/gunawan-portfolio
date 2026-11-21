@@ -8,8 +8,6 @@ const stats = computed(() => [
   { value: '3', label: t.value.about.stats?.certifications ?? 'Certifications' },
   { value: '5+', label: t.value.about.stats?.tech ?? 'Tech Stacks' },
 ])
-
-const highlightIcons = ['🏗️', '🔧', '📊']
 </script>
 
 <template>
@@ -60,9 +58,24 @@ const highlightIcons = ['🏗️', '🔧', '📊']
             v-reveal class="about-highlight"
           >
             <div class="about-highlight-header">
-              <span class="about-highlight-icon">{{ highlightIcons[index] }}</span>
-              <span class="about-highlight-number">
-                {{ String(index + 1).padStart(2, '0') }}
+              <span class="about-highlight-icon" aria-hidden="true">
+                <!-- System Development (Layers) -->
+                <svg v-if="index === 0" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+                <!-- Technical Problem Solving (Terminal) -->
+                <svg v-else-if="index === 1" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="4 17 10 11 4 5" />
+                  <line x1="12" y1="19" x2="20" y2="19" />
+                </svg>
+                <!-- Business & System Analysis (Activity / Chart) -->
+                <svg v-else viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
               </span>
             </div>
             <div>

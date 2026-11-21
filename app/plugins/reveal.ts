@@ -15,7 +15,7 @@ const getObserver = (): IntersectionObserver | null => {
         observer?.unobserve(entry.target)
       }
     },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' },
+    { threshold: 0.08, rootMargin: '0px 0px -30px 0px' },
   )
 
   return observer
@@ -28,7 +28,7 @@ const revealDirective: Directive<HTMLElement> = {
     const reducedMotion = window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
     if (reducedMotion) return
 
-    if (el.getBoundingClientRect().top < window.innerHeight) return
+    if (el.getBoundingClientRect().top < window.innerHeight * 0.92) return
 
     el.classList.add('reveal')
     getObserver()?.observe(el)
@@ -44,5 +44,3 @@ const revealDirective: Directive<HTMLElement> = {
 export default defineNuxtPlugin((nuxtApp) => {
   nuxtApp.vueApp.directive('reveal', revealDirective as any)
 })
-
-

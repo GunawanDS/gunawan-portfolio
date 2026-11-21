@@ -530,13 +530,51 @@
 
   /* Contact */
 
-  .contact-content h2 {
-    font-size: 32px;
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 
-  .contact-link {
-    grid-template-columns: 65px minmax(0, 1fr) 16px;
+  .contact-content h2 {
+    font-size: 28px;
+  }
+
+  .contact-link-direct {
+    grid-template-columns: 36px minmax(0, 1fr) 16px;
+    gap: 12px;
+    padding: 12px 14px;
+  }
+
+  .contact-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .contact-form {
+    padding: 20px 16px;
+    gap: 14px;
+  }
+
+  .contact-socials {
     gap: 8px;
+    margin-top: 16px;
+  }
+
+  .contact-social-pill {
+    padding: 8px 12px;
+    font-size: 12.5px;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 18px;
+    width: 42px;
+    height: 42px;
+  }
+
+  .back-to-top-ring {
+    width: 42px;
+    height: 42px;
   }
 }
 

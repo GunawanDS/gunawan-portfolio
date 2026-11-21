@@ -31,8 +31,52 @@ export const usePortfolioSettings = () => {
     theme.value = value
   }
 
-  const toggleTheme = () => {
-    theme.value = theme.value === 'dark' ? 'light' : 'dark'
+  const toggleTheme = (event?: MouseEvent) => {
+    const nextTheme: Theme = theme.value === 'dark' ? 'light' : 'dark'
+
+    if (
+      typeof document === 'undefined' ||
+      !('startViewTransition' in document) ||
+      window.matchMedia?.('(prefers-reduced-motion: reduce)')?.matches
+    ) {
+      theme.value = nextTheme
+      return
+    }
+
+    const x = event?.clientX ?? window.innerWidth - 60
+    const y = event?.clientY ?? 36
+    const maxRadius = Math.hypot(
+      Math.max(x, window.innerWidth - x),
+      Math.max(y, window.innerHeight - y),
+    )
+
+    const root = document.documentElement
+    root.classList.add('is-vt-active')
+
+    const transition = (document as any).startViewTransition(() => {
+      theme.value = nextTheme
+      root.dataset.theme = nextTheme
+    })
+
+    transition.ready.then(() => {
+      root.animate(
+        {
+          clipPath: [
+            `circle(0px at ${x}px ${y}px)`,
+            `circle(${maxRadius}px at ${x}px ${y}px)`,
+          ],
+        },
+        {
+          duration: 500,
+          easing: 'cubic-bezier(0.22, 1, 0.36, 1)',
+          pseudoElement: '::view-transition-new(root)',
+        },
+      )
+    })
+
+    transition.finished.finally(() => {
+      root.classList.remove('is-vt-active')
+    })
   }
 
   // onMounted hanya berjalan di client, sehingga localStorage / document aman dipakai.
