@@ -55,8 +55,10 @@ const languages = computed(() => t.value.certifications.languages)
               :aria-label="`${t.certifications.viewLabel}: ${item.name}`"
               @click="openDocument(item.file, item.name)"
             >
-              {{ t.certifications.viewLabel }}
-              <span aria-hidden="true">↗</span>
+              <span>{{ t.certifications.viewLabel }}</span>
+              <svg class="doc-btn-icon" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M7 17 17 7M7 7h10v10" />
+              </svg>
             </button>
           </div>
         </article>

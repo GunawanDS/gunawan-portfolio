@@ -569,21 +569,26 @@ export default {
           { name: 'PHP', icon: 'devicon-php-plain colored' },
           { name: 'JavaScript', icon: 'devicon-javascript-plain colored' },
           { name: 'TypeScript', icon: 'devicon-typescript-plain colored' },
+          { name: 'Python', icon: 'devicon-python-plain colored' },
+          { name: 'Go', icon: 'devicon-go-original-wordmark colored' },
           { name: 'Java', icon: 'devicon-java-plain colored' },
           { name: 'SQL', symbol: 'SQL' },
         ],
       },
       {
         title: 'Frameworks & Libraries',
-        description: 'Frameworks and libraries for modern web development.',
+        description: 'Frameworks and libraries for modern web and mobile development.',
         technologies: [
           { name: 'Laravel', icon: 'devicon-laravel-plain colored' },
+          { name: '.NET', icon: 'devicon-dotnetcore-plain colored' },
+          { name: 'NestJS', icon: 'devicon-nestjs-original colored' },
+          { name: 'Express.js', icon: 'devicon-express-original' },
           { name: 'Vue.js', icon: 'devicon-vuejs-plain colored' },
           { name: 'Nuxt.js', icon: 'devicon-nuxtjs-plain colored' },
-          { name: 'jQuery', icon: 'devicon-jquery-plain colored' },
-          { name: 'Express.js', icon: 'devicon-express-original' },
           { name: 'React.js', icon: 'devicon-react-original colored' },
+          { name: 'React Native', icon: 'devicon-react-original colored' },
           { name: 'Next.js', icon: 'devicon-nextjs-plain' },
+          { name: 'jQuery', icon: 'devicon-jquery-plain colored' },
         ],
       },
       {
@@ -592,6 +597,8 @@ export default {
         technologies: [
           { name: 'PostgreSQL', icon: 'devicon-postgresql-plain colored' },
           { name: 'MySQL', icon: 'devicon-mysql-original colored' },
+          { name: 'MariaDB', icon: 'devicon-mariadb-original colored' },
+          { name: 'Oracle', icon: 'devicon-oracle-original colored' },
         ],
       },
       {

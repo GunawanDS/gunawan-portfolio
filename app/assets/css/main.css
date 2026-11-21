@@ -3215,8 +3215,125 @@ html.is-vt-active *::after {
 }
 
 .btn-icon,
-.btn-icon-download {
+.btn-icon-download,
+.doc-btn-icon {
   transition: transform 0.2s ease;
+}
+
+.doc-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 9px;
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.18s ease;
+}
+
+.doc-button:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+  background: var(--color-surface-card);
+}
+
+.doc-button:active {
+  transform: scale(0.97);
+}
+
+.doc-button:hover .doc-btn-icon {
+  transform: translate(1.5px, -1.5px);
+}
+
+/* =====================================================
+   21. UNIFIED EDITORIAL BADGES, BUBBLES & BUTTONS
+   ===================================================== */
+
+/* Neutral, cohesive tech pills & status badges (no neon/AI glow) */
+.experience-technologies span,
+.technology-tag,
+.modal-tech-tag,
+.project-status,
+.project-role-badge,
+.certification-type,
+.education-achievement,
+.arch-layer-tech {
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  box-shadow: none;
+}
+
+.experience-technologies span:hover,
+.technology-tag:hover,
+.modal-tech-tag:hover {
+  border-color: var(--color-primary);
+  color: var(--color-heading);
+  background: var(--color-surface-light);
+  transform: none;
+}
+
+.project-status,
+.certification-type,
+.education-achievement {
+  color: var(--color-muted);
+  font-size: 11.5px;
+  font-weight: 600;
+}
+
+.project-role-badge {
+  background: var(--color-surface-light);
+  border-color: var(--color-border);
+}
+
+.role-badge-value {
+  color: var(--color-heading);
+  font-weight: 600;
+}
+
+.hero-status {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  box-shadow: none;
+}
+
+.modal-dismiss-btn {
+  padding: 9px 18px;
+  border-radius: 10px;
+  background: var(--color-surface-light);
+  border: 1px solid var(--color-border);
+  color: var(--color-heading);
+  font-weight: 600;
+  transition: border-color 0.2s ease, color 0.2s ease, transform 0.18s ease;
+}
+
+.modal-dismiss-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.modal-dismiss-btn:active {
+  transform: scale(0.97);
+}
+
+/* Consistent crisp border-radius on all buttons */
+.hero-button,
+.contact-cta,
+.project-detail-btn,
+.menu-cv-btn,
+.doc-button {
+  border-radius: 10px;
 }
 
 /* Responsive adjust */
